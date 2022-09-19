@@ -1,0 +1,30 @@
+[
+    {
+        "Id": 1,
+        "Name": "La Tagliatella",
+        "Description": "Italian cuisine is a Mediterranean cuisine consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula since the antiquity, and later spread around the world together with waves of Italian diaspora.",
+        "TypeOfFood": "italian",
+        "Image": "it.png"
+    },
+    {
+        "Id": 2,
+        "Name": "Sakura Restaurant",
+        "Description": "Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, vegetables, and occasionally tropical fruits.",
+        "TypeOfFood": "japanese",
+        "Image": "jp.png"
+    },
+    {
+        "Id": 3,
+        "Name": "The Max",
+        "Description": "The Max was where you went after school and I desperately wanted to be there – even if it meant having to watch creepy Max’s magic tricks.",
+        "TypeOfFood": "american",
+        "Image": "us.png"
+    },
+    {
+        "Id": 5,
+        "Name": "Sushi Shop",
+        "Description": "Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, vegetables, and occasionally tropical fruits.",
+        "TypeOfFood": "japanese",
+        "Image": "ru.png"
+    }
+]

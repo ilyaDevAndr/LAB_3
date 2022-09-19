@@ -7,7 +7,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        BindingContext = new FoodViewModel();
+        BindingContext = new CountryViewModel();
     }
 }
 

@@ -9,7 +9,6 @@
                      Command="{Binding AddItemCommand}"/>
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
         <Grid ColumnDefinitions="*,*">
             <ScrollView Grid.Column="0">
                 <CollectionView ItemsSource="{Binding Foods}"
@@ -71,6 +70,5 @@
                        HorizontalTextAlignment="Center" />
             </ScrollView>
         </Grid>
-    </StackLayout>
 
 </ContentPage>

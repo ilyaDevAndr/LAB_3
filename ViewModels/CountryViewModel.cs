@@ -10,21 +10,21 @@ using System.Windows.Input;
 
 namespace LAB_3.ViewModels
 {
-    public class FoodViewModel : BindableObject
+    public class CountryViewModel : BindableObject
     {
         // Переменная для хранения состояния
         // выбранного элемента коллекции
-        private Food _selectedItem;
+        private Country _selectedItem;
         // Объект с логикой по извлечению данных
         // из источника
-        FoodService foodService = new();
+        FoodService countryService = new();
 
         // Коллекция извлекаемых объектов
-        public ObservableCollection<Food> Foods { get; } = new();
+        public ObservableCollection<Country> Foods { get; } = new();
 
         // Конструктор с вызовом метода
         // получения данных
-        public FoodViewModel()
+        public CountryViewModel()
         {
             GetFoodsAsync();
         }
@@ -35,7 +35,7 @@ namespace LAB_3.ViewModels
 
         // Свойство для представления и изменения
         // состояния выбранного объекта
-        public Food SelectedItem
+        public Country SelectedItem
         {
             get => _selectedItem;
             set
@@ -55,12 +55,12 @@ namespace LAB_3.ViewModels
         // Метод для создания нового элемента
         private void AddNewItem()
         {
-            Foods.Add(new Food
+            Foods.Add(new Country
             {
                 Id = Foods.Count + 1,
                 Name = "Title " + Foods.Count,
                 Description = "Description",
-                TypeOfFood = "country"
+                
             });
         }
 
@@ -69,12 +69,12 @@ namespace LAB_3.ViewModels
         {
             try
             {
-                var foods = await foodService.GetFood();
+                var country = await countryService.GetFood();
 
                 if (Foods.Count != 0)
                     Foods.Clear();
 
-                foreach (var food in foods)
+                foreach (var food in country)
                 {
                     Foods.Add(food);
                 }

@@ -12,11 +12,11 @@ namespace LAB_3.Sevices
     public class FoodService
     {
         // Создаем список для хранения данных из источника
-        List<Food> foodList = new();
+        List<Country> foodList = new();
 
         // Метод GetFood() служит для извлечения и сруктурирования данных
         // в соответсвии с существующей моделью данных
-        public async Task<IEnumerable<Food>> GetFood()
+        public async Task<IEnumerable<Country>> GetFood()
         {
             // Если список содержит какие-то элементы
             // то вернется последовательность с содержимым этого списка
@@ -25,10 +25,10 @@ namespace LAB_3.Sevices
 
             // В данном блоке кода осуществляется подключение, чтение
             // и дессериализация файла - источника данных
-            using var stream = await FileSystem.OpenAppPackageFileAsync("food.json");
+            using var stream = await FileSystem.OpenAppPackageFileAsync("country.json");
             using var reader = new StreamReader(stream);
             var contents = await reader.ReadToEndAsync();
-            foodList = JsonSerializer.Deserialize<List<Food>>(contents);
+            foodList = JsonSerializer.Deserialize<List<Country>>(contents);
 
             return foodList;
         }

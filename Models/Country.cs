@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace LAB_3.Models
 {
-    public class Food
+    public class Country
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string TypeOfFood { get; set; }
         public string Image { get; set; }
     }
 }
